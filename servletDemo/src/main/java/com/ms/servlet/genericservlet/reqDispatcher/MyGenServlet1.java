@@ -23,6 +23,7 @@ public class MyGenServlet1 extends GenericServlet{
 	public void service(ServletRequest req, ServletResponse res) throws ServletException, IOException{
 		String name = req.getParameter("name");
 		
+		/*########### Sending Data to the ViewPage ##############*/
 		RequestDispatcher rd = req.getRequestDispatcher("forwardedData.html");
 		
 		//Printwriter allows to display data on the browser rather than terminal
@@ -33,6 +34,13 @@ public class MyGenServlet1 extends GenericServlet{
 		
 		//forwarding the control along with data
 		rd.include(req, res);
+		
+		/*########### Sending Data to the another servlet ##############*/
+		/*
+		RequestDispatcher dispatcher = req.getRequestDispatcher("myGenSevelet2");
+		res.getWriter().print(name);
+		dispatcher.include(req, res);
+		*/
 	}
 
 }
