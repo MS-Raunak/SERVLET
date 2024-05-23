@@ -1,6 +1,6 @@
 Servlet
 ==========
-= Servlet is a server-side technology/component which is used to build dynamic webpages.
+- Servlet is a server-side technology/component which is used to build dynamic webpages.
 - It is used to handle client request, process the request and generate dynamic response.
 
 Deployment Descriptor Tool(DDT)
