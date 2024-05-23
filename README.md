@@ -32,6 +32,7 @@ Example:
 
 2) Annotation based Mapping
    Example:
+   ============
   @WebServlet("/example") // This annotation maps the servlet to the URL "/example"
   public class ExampleServlet extends HttpServlet {
       protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
@@ -51,6 +52,7 @@ GenericServlet
   ServletResponse res) method to provide the logic for handling requests.
 
 Example:
+===============
 public class MyGenericServlet extends GenericServlet {
     public void service(ServletRequest req, ServletResponse res) throws ServletException, IOException {
         res.setContentType("text/html");
@@ -71,6 +73,7 @@ HttpServlet
 - Extend javax.servlet.http.HttpServlet: To create an HTTP servlet, you create a subclass of HttpServlet and override one or more of its doGet(), doPost(), doPut(), doDelete(), etc., methods to provide the logic for handling specific HTTP methods.
 
 Example:
+=============
 public class MyHttpServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html");
@@ -90,6 +93,7 @@ getParameter() method
 The getParameter() method is provided by the ServletRequest class in the Java Servlet API. 
 It's used to retrieve the value of a request parameter that was sent by the client as part of an HTTP request.
 Example:
+===========
 protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     // Retrieve the value of a request parameter named "name"
     String name = request.getParameter("name");
@@ -112,6 +116,7 @@ There are two main methods provided by RequestDispatcher:
    - This method forwards the request from the current servlet to another servlet or resource on the server.
    - After the forward, the response is sent back to the client by the target servlet, and the current servlet does not send any response.
      Example:
+     ========
      public class MyServlet extends HttpServlet {
       protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // Forward the request to another servlet
@@ -124,6 +129,7 @@ There are two main methods provided by RequestDispatcher:
    - This method includes the content of another servlet or resource in the response of the current servlet.
    - The included servlet's response is sent back to the client along with the response of the current servlet.
      Example:
+     ==========
      public class MyServlet extends HttpServlet {
       protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // Include the content of another servlet
@@ -203,6 +209,7 @@ Servlets can use methods like HttpServletRequest.getSession() to retrieve the cu
 Sessions are typically backed by server-side data structures (e.g., HttpSession objects) and are associated with a unique session identifier.
 
 Example:
+=========
 public class LoginServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // Retrieve username and password from request parameters
