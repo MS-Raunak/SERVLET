@@ -56,8 +56,9 @@ GenericServlet
   Extend javax.servlet.GenericServlet: To create a servlet, you create a subclass of GenericServlet and override the service(ServletRequest req,
   ServletResponse res) method to provide the logic for handling requests.
 
-Example:
+Example
 ===============
+
 public class MyGenericServlet extends GenericServlet {
     public void service(ServletRequest req, ServletResponse res) throws ServletException, IOException {
         res.setContentType("text/html");
@@ -77,8 +78,9 @@ HttpServlet
 
 - Extend javax.servlet.http.HttpServlet: To create an HTTP servlet, you create a subclass of HttpServlet and override one or more of its doGet(), doPost(), doPut(), doDelete(), etc., methods to provide the logic for handling specific HTTP methods.
 
-Example:
+Example
 =============
+
 public class MyHttpServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html");
