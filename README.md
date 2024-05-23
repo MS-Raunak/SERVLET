@@ -18,7 +18,8 @@ Types of Sevlet
 Mapping url with Servlet
 =========================
 There are two way to mappin url with servlet-
-1) using ddt or web.xml(tag based mapping)
+
+1) Using ddt or web.xml(tag based mapping)
 ============================================
 Example:
 <!-- Servlet Mapping -->
@@ -33,8 +34,10 @@ Example:
 
 2) Annotation based Mapping
 =============================
+
    Example:
    ============
+   
   @WebServlet("/example") // This annotation maps the servlet to the URL "/example"
   public class ExampleServlet extends HttpServlet {
       protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
