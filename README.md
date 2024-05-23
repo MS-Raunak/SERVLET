@@ -56,17 +56,6 @@ GenericServlet
   Extend javax.servlet.GenericServlet: To create a servlet, you create a subclass of GenericServlet and override the service(ServletRequest req,
   ServletResponse res) method to provide the logic for handling requests.
 
-Example
-===============
-<!-GenericServlet-->
-public class MyGenericServlet extends GenericServlet {
-    public void service(ServletRequest req, ServletResponse res) throws ServletException, IOException {
-        res.setContentType("text/html");
-        res.getWriter().println("<html><body>");
-        res.getWriter().println("<h1>Hello from Generic Servlet!<h1>");
-        res.getWriter().println("</body></html>");
-    }
-}
 
 
 HttpServlet
@@ -78,22 +67,7 @@ HttpServlet
 
 - Extend javax.servlet.http.HttpServlet: To create an HTTP servlet, you create a subclass of HttpServlet and override one or more of its doGet(), doPost(), doPut(), doDelete(), etc., methods to provide the logic for handling specific HTTP methods.
 
-Example
-=============
 
-public class MyHttpServlet extends HttpServlet {
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        response.setContentType("text/html");
-        PrintWriter out = response.getWriter();
-        out.println("<html><body>");
-        out.println("<h1>Hello from HttpServlet!</h1>");
-        out.println("</body></html>");
-    }
-
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        // Handling POST requests
-    }
-}
 
 getParameter() method
 =====================
