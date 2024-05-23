@@ -19,7 +19,7 @@ Mapping url with Servlet
 =========================
 There are two way to mappin url with servlet-
 
-1) Using ddt or web.xml(tag based mapping)
+1)Using ddt or web.xml(tag based mapping)
 ============================================
 Example:
 <!-- Servlet Mapping -->
@@ -32,7 +32,7 @@ Example:
         <url-pattern>/example</url-pattern> <!-- This maps the servlet to the URL "/example" -->
     </servlet-mapping>
 
-2) Annotation based Mapping
+@)Annotation based Mapping
 =============================
 
    Example:
