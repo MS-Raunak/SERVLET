@@ -32,7 +32,7 @@ Example:
         <url-pattern>/example</url-pattern> <!-- This maps the servlet to the URL "/example" -->
     </servlet-mapping>
 
-@)Annotation based Mapping
+2)Annotation based Mapping
 =============================
 
    Example:
