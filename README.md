@@ -63,7 +63,7 @@ public class MyGenericServlet extends GenericServlet {
     public void service(ServletRequest req, ServletResponse res) throws ServletException, IOException {
         res.setContentType("text/html");
         res.getWriter().println("<html><body>");
-        res.getWriter().println("<h1>Hello from Generic Servlet!</h1>");
+        res.getWriter().println("<h1>Hello from Generic Servlet!<h1>");
         res.getWriter().println("</body></html>");
     }
 }
