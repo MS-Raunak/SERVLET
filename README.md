@@ -180,23 +180,23 @@ Session tracking in web development refers to the process of maintaining statefu
 
 There are several techniques for session tracking in servlet-based web applications:
 
-1) Cookies: 
+1) Cookies
 ===========
 Cookies are small pieces of data stored on the client's browser and sent with each request to the server.
 They can be used to store session identifiers or other session-related data. Servlets can use the javax.servlet.http.Cookie class to set and retrieve cookies.
 
-2) URL Rewriting: 
+2) URL Rewriting
 ===================
 With URL rewriting, the web application includes the session identifier in the URLs it generates.
 This session identifier is typically encoded as a query parameter or as part of the URL path.
  Servlets can use HttpServletResponse.encodeURL() to automatically append the session ID to URLs.
 
-3) Hidden Form Fields:
+3) Hidden Form Fields
 =========================
 In this technique, the session identifier is included as a hidden field in HTML forms submitted by the client.
 Servlets can retrieve the session identifier from these hidden form fields and use it to associate requests with sessions.
 
-4) Session Tracking API: 
+4) Session Tracking API
 ======================
 Servlet containers typically provide a session tracking API that allows servlets to manage sessions explicitly.
 Servlets can use methods like HttpServletRequest.getSession() to retrieve the current session or create a new session if one doesn't exist.
